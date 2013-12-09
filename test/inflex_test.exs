@@ -4,7 +4,13 @@ defmodule InflexTest do
   import Inflex
 
   test :singularize do
-    assert "dog" == singularize("dogs")
     assert "sheep" == singularize("sheep")
+    assert "mouse" == singularize("mice")
+  end
+
+  test :replace do
+    assert "mouse" == replace("mice", [ { "mouse", "mice" } ])
+    assert "men" == replace("man", [ { "man", "men" } ])
+    assert "person" == replace("people", [ { "person", "people" } ])
   end
 end
