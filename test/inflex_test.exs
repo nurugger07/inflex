@@ -13,4 +13,8 @@ defmodule InflexTest do
     assert "men" == replace("man", [ { "man", "men" } ])
     assert "person" == replace("people", [ { "person", "people" } ])
   end
+
+  test :replace_with_matcher do
+    assert "dog" == replace("dogs", [ { %r/s$/, "" } ])
+  end
 end

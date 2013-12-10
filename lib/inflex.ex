@@ -32,7 +32,10 @@ defmodule Inflex do
 
   defp match(word, plural, singular) when word == plural, do: singular
   defp match(word, plural, singular) when word == singular, do: plural
-  defp match(word, _, _), do: word
+  defp match(word, regex, replacement) when is_regex(regex) do
+    Regex.replace(regex, word, replacement)
+  end
+  defp match(word,_,_), do: word
 
   defp uncountable?(word), do: Enum.member?(@uncountable, word)
 
