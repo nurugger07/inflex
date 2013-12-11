@@ -4,6 +4,8 @@ defmodule InflexTest do
   import Inflex
 
   test :singularize do
+    assert "dog" == singularize("dog")
+    assert "dog" == singularize("dogs")
     assert "sheep" == singularize("sheep")
     assert "mouse" == singularize("mice")
   end

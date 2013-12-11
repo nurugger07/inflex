@@ -18,10 +18,14 @@ defmodule Inflex do
     { "person", "people" }
   ]
 
+  @singular [
+    { %r/s$/, "" }
+  ]
+
   def singularize(word) do
     cond do
       uncountable?(word) -> word
-      true -> replace(word, @irregular)
+      true -> replace(word, @irregular ++ @singular)
     end
   end
 
