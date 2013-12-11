@@ -4,19 +4,17 @@ defmodule InflexTest do
   import Inflex
 
   test :singularize do
-    assert "dog" == singularize("dog")
-    assert "dog" == singularize("dogs")
+    assert "user" == singularize("users")
     assert "sheep" == singularize("sheep")
     assert "mouse" == singularize("mice")
+    assert "child" == singularize("children")
+
+    assert "bus" == singularize("buses")
+    assert "database" == singularize("databases")
+    assert "shoe" == singularize("shoes")
   end
 
-  test :replace do
-    assert "mouse" == replace("mice", [ { "mouse", "mice" } ])
-    assert "men" == replace("man", [ { "man", "men" } ])
-    assert "person" == replace("people", [ { "person", "people" } ])
-  end
-
-  test :replace_with_matcher do
-    assert "dog" == replace("dogs", [ { %r/s$/, "" } ])
+  test :skip_singularize do
+    assert "dog" == singularize("dog")
   end
 end
