@@ -75,6 +75,10 @@ defmodule Inflex do
     { %r/$/i, "s" },
   ]
 
+  def start(_type, _args) do
+    Inflex.Supervisor.start_link
+  end
+
   def singularize(word), do: find_match(@singular, word)
 
   def pluralize(word), do: find_match(@plural, word)
@@ -82,22 +86,23 @@ defmodule Inflex do
   defp find_match(set, word) do
     cond do
       uncountable?(word) -> word
-      @default -> replace(set, word)
+      @default -> replace_match(set, word)
     end
   end
 
-  defp replace(set, word) do
-    Enum.find(set, fn({ reg, _ }) -> Regex.match?(reg, word) end) |> match(word)
+  defp replace_match(set, word) do
+     find_in_set(set, word) |> replace(word)
   end
 
-  defp match({regex, replacement}, word) when is_regex(regex) do
+  defp find_in_set(set, word) do
+    Enum.find(set, fn({ reg, _ }) -> Regex.match?(reg, word) end)
+  end
+
+  defp replace({regex, replacement}, word) when is_regex(regex) do
     Regex.replace(regex, word, replacement)
   end
-  defp match(_, word), do: word
+  defp replace(_, word), do: word
 
-  def uncountable?(word), do: Enum.member?(@uncountable, word)
+  defp uncountable?(word), do: Enum.member?(@uncountable, word)
 
-  def start(_type, _args) do
-    Inflex.Supervisor.start_link
-  end
 end
