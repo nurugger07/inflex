@@ -17,14 +17,19 @@ defmodule Inflex do
   ]
 
   @irregular [
-    { %r/(child)ren/i, "\\1" },
-    { %r/(wo)?men$/i, "\\1man" },
-    { %r/(m|l)ice/i, "\\1ouse" },
     { %r/people/i, "person" },
     { %r/^(zombie)s$/i, "\\1" }
   ]
 
-  @singular [
+  @plural_irregular [
+    { %r/person/i, "people" },
+    { %r/^zombies$/i, "zombie" }
+  ]
+
+  @singular @irregular ++ [
+    { %r/(child)ren/i, "\\1" },
+    { %r/(wo)?men$/i, "\\1man" },
+    { %r/(m|l)ice/i, "\\1ouse" },
     { %r/(bus)(es)?$/i, "\\1" },
     { %r/(ss)$/i, "\\1" },
     { %r/(database)s$/i, "\\1" },
@@ -45,12 +50,43 @@ defmodule Inflex do
     { %r/s$/i, "" },
   ]
 
-  def singularize(word) do
+  @plural @plural_irregular ++ [ 
+    { %r/(child)$/i, "\\1ren" },
+    { %r/(wo)?man$/i, "\\1men" },
+    { %r/(m|l)ouse/i, "\\1ice" },
+    { %r/(ss)$/i, "\\1" },
+    { %r/(database)s$/i, "\\1" },
+    { %r/(quiz)$/i, "\\1zes" },
+    { %r/^(ox)$/i, "\\1en" },
+    { %r/(matr|vert|ind)ix|ex$/i, "\\1ices" },
+    { %r/(x|ch|ss|sh)$/i, "\\1es" },
+    { %r/([^aeiouy]|qu)y$/i, "\\1ies" },
+    { %r/(hive)$/i, "\\1s" },
+    { %r/(?:([^f])fe|([lr])f)$/i, "\\1\\1ves" },
+    { %r/sis$/i, "ses" },
+    { %r/([ti])um$/i, "\\1a" },
+    { %r/(buffal|tomat)o$/i, "\\1oes" },
+    { %r/(octop|vir)us$/i, "\\1i" },
+    { %r/(alias|status)$/i, "\\1es" },
+    { %r/(ax|test)is$/i, "\\1es" },
+    { %r/(bus)$/i, "\\1es" },
+    { %r/s$/i, "s" },
+    { %r/$/i, "s" },
+  ]
+
+  def singularize(word), do: find_match(@singular, word)
+
+  def pluralize(word), do: find_match(@plural, word)
+
+  defp find_match(set, word) do
     cond do
       uncountable?(word) -> word
-      @default ->
-        Enum.find(@irregular ++ @singular, fn({ reg, _ }) -> Regex.match?(reg, word) end) |> match(word)
+      @default -> replace(set, word)
     end
+  end
+  
+  defp replace(set, word) do
+    Enum.find(set, fn({ reg, _ }) -> Regex.match?(reg, word) end) |> match(word)
   end
 
   defp match({regex, replacement}, word) when is_regex(regex) do
@@ -58,7 +94,7 @@ defmodule Inflex do
   end
   defp match(_, word), do: word
 
-  defp uncountable?(word), do: Enum.member?(@uncountable, word)
+  def uncountable?(word), do: Enum.member?(@uncountable, word)
 
   def start(_type, _args) do
     Inflex.Supervisor.start_link
