@@ -37,6 +37,7 @@ defmodule Inflex do
     { %r/([ti])a$/i, "\1um" },
     { %r/((a)naly|(b)a|(d)iagno|(p)arenthe|(p)rogno|(s)ynop|(t)he)(sis|ses)$/i, "\\1sis" },
     { %r/(analy)(sis|ses)$/i, "\\1sis" },
+    { %r/(octop|vir)i$/i, "\\1us" },
     { %r/([^f])ves$/i, "\\1fe" },
     { %r/(hive)s$/i, "\\1" },
     { %r/(tive)s$/i, '\\1' },
@@ -50,7 +51,7 @@ defmodule Inflex do
     { %r/s$/i, "" },
   ]
 
-  @plural @plural_irregular ++ [ 
+  @plural @plural_irregular ++ [
     { %r/(child)$/i, "\\1ren" },
     { %r/(wo)?man$/i, "\\1men" },
     { %r/(m|l)ouse/i, "\\1ice" },
@@ -84,7 +85,7 @@ defmodule Inflex do
       @default -> replace(set, word)
     end
   end
-  
+
   defp replace(set, word) do
     Enum.find(set, fn({ reg, _ }) -> Regex.match?(reg, word) end) |> match(word)
   end
