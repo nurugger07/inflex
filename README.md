@@ -36,6 +36,18 @@ iex(4)> Inflex.pluralize("person")
 
 ```
 
+Inflex also camelizes or pascalizes strings and atoms.
+
+```
+
+iex(1)> Inflex.camelize(:upper_camel_case)
+"UpperCamelCase"
+
+iex(2)> Inflex.camelize("pascal-case", :lower)
+"pascalCase"
+
+```
+
 To incorporate Inflex in your modules, use `import`.
 
 ``` elixir
