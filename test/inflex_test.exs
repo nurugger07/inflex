@@ -28,6 +28,17 @@ defmodule InflexTest do
     assert "viri" == pluralize("virus")
   end
 
+  test :camelize_upper do
+    assert "UpperCamelCase" == camelize("upper_camel_case")
+    refute "UpperCamelCase" == camelize("upper_camel_case", :lower)
+  end
+
+  test :camelize_lower do
+    assert "lowerCamelCase" == camelize("lower_camel_case", :lower)
+    assert "lowerCamelCase" == camelize("Lower_camel_case", :lower)
+    refute "lowerCamelCase" == camelize("lower_camel_case")
+  end
+
   test :skip_singularize do
     assert "dog" == singularize("dog")
   end

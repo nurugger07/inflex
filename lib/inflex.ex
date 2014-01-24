@@ -1,6 +1,8 @@
 defmodule Inflex do
   use Application.Behaviour
 
+  use Inflex.Camelize
+
   @default true
 
   @uncountable  [
