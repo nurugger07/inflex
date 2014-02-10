@@ -28,6 +28,14 @@ defmodule InflexTest do
     assert "viri" == pluralize("virus")
   end
 
+  test :skip_singularize do
+    assert "dog" == singularize("dog")
+  end
+
+  test :skip_pluralize do
+    assert "dogs" == pluralize("dogs")
+  end
+
   test :camelize_upper do
     assert "UpperCamelCase" == camelize("upper_camel_case")
     refute "UpperCamelCase" == camelize("upper_camel_case", :lower)
@@ -37,13 +45,12 @@ defmodule InflexTest do
     assert "lowerCamelCase" == camelize("lower_camel_case", :lower)
     assert "lowerCamelCase" == camelize("Lower_camel_case", :lower)
     refute "lowerCamelCase" == camelize("lower_camel_case")
+    assert "elixir-inflex" == parameterize("elixir inflex")
   end
 
-  test :skip_singularize do
-    assert "dog" == singularize("dog")
-  end
-
-  test :skip_pluralize do
-    assert "dogs" == pluralize("dogs")
+  test :parameterize do
+    assert "elixir-inflex" == parameterize("Elixir Inflex")
+    assert "elixir_inflex" == parameterize("elixir inflex", "_")
+    assert "elixir-inflex" == parameterize("elixir%20inflex")
   end
 end
