@@ -3,7 +3,7 @@ defmodule Inflex.Mixfile do
 
   def project do
     [ app: :inflex,
-      version: "0.1.0",
+      version: "0.2.0",
       elixir: ">= 0.12.0",
       deps: deps ]
   end
@@ -13,11 +13,6 @@ defmodule Inflex.Mixfile do
     [mod: { Inflex, [] }]
   end
 
-  # Returns the list of dependencies in the format:
-  # { :foobar, git: "https://github.com/elixir-lang/foobar.git", tag: "0.1" }
-  #
-  # To specify particular versions, regardless of the tag, do:
-  # { :barbat, "~> 0.1", github: "elixir-lang/barbat.git" }
   defp deps do
     []
   end
