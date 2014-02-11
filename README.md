@@ -48,6 +48,18 @@ iex(2)> Inflex.camelize("pascal-case", :lower)
 
 ```
 
+Strings can be parameterized easily.
+
+```
+
+iex(1)> Inflex.parameterize("String for parameter")
+"string-for-parameter"
+
+iex(2)> Inflex.camelize("String with underscore", "_")
+"string_with_underscore"
+
+```
+
 To incorporate Inflex in your modules, use `import`.
 
 ``` elixir
