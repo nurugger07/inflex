@@ -13,6 +13,7 @@ defmodule Inflex do
     quote do
       use Inflex.Camelize
       use Inflex.Pluralize
+      use Inflex.Parameterize
     end
   end
 end

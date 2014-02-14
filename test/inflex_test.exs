@@ -45,10 +45,10 @@ defmodule InflexTest do
     assert "lowerCamelCase" == camelize("lower_camel_case", :lower)
     assert "lowerCamelCase" == camelize("Lower_camel_case", :lower)
     refute "lowerCamelCase" == camelize("lower_camel_case")
-    assert "elixir-inflex" == parameterize("elixir inflex")
   end
 
   test :parameterize do
+    assert "elixir-inflex" == parameterize("elixir inflex")
     assert "elixir-inflex" == parameterize("Elixir Inflex")
     assert "elixir_inflex" == parameterize("elixir inflex", "_")
     assert "elixir-inflex" == parameterize("elixir%20inflex")
