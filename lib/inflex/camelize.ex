@@ -4,8 +4,8 @@ defmodule Inflex.Camelize do
     quote do
       import unquote __MODULE__
 
-      def camelize(word, option//:upper) do
-        Regex.split(%r/(?:^|[-_])/, to_string(word)) |>
+      def camelize(word, option\\:upper) do
+        Regex.split(~r/(?:^|[-_])/, to_string(word)) |>
           camelize_list(option) |>
           Enum.join
       end
