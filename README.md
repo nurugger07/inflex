@@ -1,8 +1,8 @@
 # Inflex
 
-An Elixir library for handling word inflections. Currently, the Inflex can singularize and pluralize words.
+An Elixir library for handling word inflections. 
 
-## Using
+## Getting Started
 
 To use Inflex, add a dependency to your project mix file
 
@@ -16,7 +16,22 @@ To use Inflex, add a dependency to your project mix file
 
 Then run `mix deps.get` in the shell to fetch and compile the dependencies.
 
+To incorporate Inflex in your modules, use `import`.
+
+``` elixir
+
+  defmodule YourModule do
+    import Inflex
+
+    def make_singular(word), do: singularize(word)
+
+  end
+
+```
+
 ## Examples
+
+### Singularize & Pluralize
 
 Here are some basic examples from `iex`:
 
@@ -36,6 +51,8 @@ iex(4)> Inflex.pluralize("person")
 
 ```
 
+### Camelize & Pascalize
+
 Inflex also camelizes or pascalizes strings and atoms.
 
 ```
@@ -48,6 +65,8 @@ iex(2)> Inflex.camelize("pascal-case", :lower)
 
 ```
 
+### Parameterize
+
 Strings can be parameterized easily.
 
 ```
@@ -57,19 +76,6 @@ iex(1)> Inflex.parameterize("String for parameter")
 
 iex(2)> Inflex.camelize("String with underscore", "_")
 "string_with_underscore"
-
-```
-
-To incorporate Inflex in your modules, use `import`.
-
-``` elixir
-
-  defmodule YourModule do
-    import Inflex
-
-    def make_singular(word), do: singularize(word)
-
-  end
 
 ```
 
