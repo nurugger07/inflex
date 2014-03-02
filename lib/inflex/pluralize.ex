@@ -96,7 +96,7 @@ defmodule Inflex.Pluralize do
         Enum.find(set, fn({ reg, _ }) -> Regex.match?(reg, word) end)
       end
 
-      defp replace({regex, replacement}, word) when is_regex(regex) do
+      defp replace({regex, replacement}, word) when is_record(regex, Regex) do
         Regex.replace(regex, word, replacement)
       end
       defp replace(_, word), do: word
