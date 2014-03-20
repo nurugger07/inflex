@@ -20,13 +20,17 @@ defmodule Inflex.Pluralize do
       @irregular [
         { ~r/people/i, "person" },
         { ~r/^(zombie)s$/i, "\\1" },
-        { ~r/geese/i, "goose" }
+        { ~r/geese/i, "goose" },
+        { ~r/criteria/i, "criterion" },
+        { ~r/radii/i, "radius" }
         ]
 
       @plural_irregular [
         { ~r/person/i, "people" },
         { ~r/^zombies$/i, "zombie" },
-        { ~r/goose/i, "geese" }
+        { ~r/goose/i, "geese" },
+        { ~r/criterion/i, "criteria" },
+        { ~r/radius/i, "radii" }
         ]
 
       @singular @irregular ++ [
