@@ -14,6 +14,7 @@ defmodule InflexTest do
     assert "shoe" == singularize("shoes")
     assert "zombie" == singularize("zombies")
     assert "virus" == singularize("viri")
+    assert "goose" == singularize("geese")
   end
 
   test :pluralize do
@@ -26,6 +27,7 @@ defmodule InflexTest do
     assert "databases" == pluralize("database")
     assert "shoes" == pluralize("shoe")
     assert "viri" == pluralize("virus")
+    assert "geese" == pluralize("goose")
   end
 
   test :skip_singularize do
