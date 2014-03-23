@@ -79,6 +79,26 @@ iex(2)> Inflex.camelize("String with underscore", "_")
 
 ```
 
+### Underscore
+
+Makes an underscored, lowercase form from a string or atom.
+
+```
+
+iex(1)> Inflex.underscore("UpperCamelCase")
+"upper_camel_case"
+
+iex(2)> Inflex.underscore("pascalCase")
+"pascal_case"
+
+iex(3)> Inflex.underscore(UpperCamelCase)
+"upper_camel_case"
+
+iex(4)> Inflex.underscore(:pascalCase)
+"pascal_case"
+
+```
+
 ## Contributing
 
 All pull requests will be reviewed for inclusion but must include tests.

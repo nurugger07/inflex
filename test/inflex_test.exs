@@ -59,4 +59,12 @@ defmodule InflexTest do
     assert "elixir_inflex" == parameterize("elixir inflex", "_")
     assert "elixir-inflex" == parameterize("elixir%20inflex")
   end
+
+  test :underscore do
+    assert "upper_camel_case" == underscore("UpperCamelCase")
+    assert "lower_camel_case" == underscore("lowerCamelCase")
+    assert "upper_camel_case" == underscore(UpperCamelCase)
+    assert "lower_camel_case" == underscore(:lowerCamelCase)
+  end
+
 end
