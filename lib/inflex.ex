@@ -4,6 +4,7 @@ defmodule Inflex do
   use Inflex.Camelize
   use Inflex.Pluralize
   use Inflex.Parameterize
+  use Inflex.Underscore
 
   def start(_type, _args) do
     Inflex.Supervisor.start_link
@@ -14,6 +15,7 @@ defmodule Inflex do
       use Inflex.Camelize
       use Inflex.Pluralize
       use Inflex.Parameterize
+      use Inflex.Underscore
     end
   end
 end
