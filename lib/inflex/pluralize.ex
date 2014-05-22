@@ -62,7 +62,6 @@ defmodule Inflex.Pluralize do
         { ~r/(child)$/i, "\\1ren" },
         { ~r/(wo)?man$/i, "\\1men" },
         { ~r/(m|l)ouse/i, "\\1ice" },
-        { ~r/(ss)$/i, "\\1" },
         { ~r/(database)s$/i, "\\1" },
         { ~r/(quiz)$/i, "\\1zes" },
         { ~r/^(ox)$/i, "\\1en" },

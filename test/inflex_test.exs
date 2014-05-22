@@ -17,6 +17,7 @@ defmodule InflexTest do
     assert "goose" == singularize("geese")
     assert "criterion" == singularize("criteria")
     assert "radius" == singularize("radii")
+    assert "class" == singularize("classes")
   end
 
   test :pluralize do
@@ -32,6 +33,7 @@ defmodule InflexTest do
     assert "geese" == pluralize("goose")
     assert "criteria" == pluralize("criterion")
     assert "radii" == pluralize("radius")
+    assert "classes" == pluralize("class")
   end
 
   test :skip_singularize do
