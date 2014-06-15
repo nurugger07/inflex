@@ -23,6 +23,6 @@ defmodule Inflex.Mixfile do
 
   # Configuration for the OTP application
   def application do
-    [mod: { Inflex, [] }]
+    []
   end
 end
