@@ -6,8 +6,8 @@ defmodule Inflex.Mixfile do
   def project do
     [
       app: :inflex,
-      version: "0.2.2",
-      elixir: ">= 0.13.3",
+      version: "0.2.3",
+      elixir: ">= 0.14.0",
       deps: [],
       package: [
         files: ["lib", "mix.exs", "README*", "LICENSE*"],
