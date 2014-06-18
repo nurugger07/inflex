@@ -5,7 +5,7 @@ defmodule Inflex.Underscore do
       import unquote __MODULE__
 
       def underscore(atom) when is_atom(atom) do
-        case atom_to_binary(atom) do
+        case Atom.to_string(atom) do
           "Elixir." <> rest -> underscore(rest)
           word -> underscore(word)
         end
@@ -15,7 +15,7 @@ defmodule Inflex.Underscore do
         word
         |> String.replace(~r/([A-Z]+)([A-Z][a-z])/, "\\1_\\2")
         |> String.replace(~r/([a-z\d])([A-Z])/, "\\1_\\2")
-        |> String.downcase                                                 
+        |> String.downcase
       end
 
     end
