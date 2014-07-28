@@ -74,7 +74,7 @@ Strings can be parameterized easily.
 iex(1)> Inflex.parameterize("String for parameter")
 "string-for-parameter"
 
-iex(2)> Inflex.camelize("String with underscore", "_")
+iex(2)> Inflex.parameterize("String with underscore", "_")
 "string_with_underscore"
 
 ```
