@@ -1,10 +1,18 @@
-# Inflex
+# Inflex[![Build Status](https://travis-ci.org/nurugger07/inflex.png?branch=master)](https://travis-ci.org/nurugger07/inflex)
 
-An Elixir library for handling word inflections. 
+An Elixir library for handling word inflections.
 
 ## Getting Started
 
-To use Inflex, add a dependency to your project mix file
+You can add Inflex as a dependency in your `mix.exs` file. Since it only requires Elixir and Erlang there are no other dependencies.
+
+```elixir
+def deps do
+  [ { :inflex, '~> 0.2.5' } ]
+end
+```
+
+If you are not using [hex](http://hex.pm) you can add the dependency using the github repo.
 
 ``` elixir
 
