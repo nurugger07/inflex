@@ -67,6 +67,8 @@ defmodule InflexTest do
     assert "lower_camel_case" == underscore("lowerCamelCase")
     assert "upper_camel_case" == underscore(UpperCamelCase)
     assert "lower_camel_case" == underscore(:lowerCamelCase)
+    assert "elixir_inflex" == underscore("elixir-inflex")
+    assert "elixir_inflex" == underscore("Elixir-Inflex")
   end
 
 end
