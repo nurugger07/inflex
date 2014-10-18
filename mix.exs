@@ -13,7 +13,7 @@ defmodule Inflex.Mixfile do
         files: ["lib", "mix.exs", "README*", "LICENSE*"],
         contributors: ["Johnny Winn"],
         licenses: ["Apache 2.0"],
-        links: [ github: "https://github.com/nurugger07/inflex" ]
+        links: %{ "GitHub" => "https://github.com/nurugger07/inflex" }
       ],
       description: """
       An Elixir library for handling word inflections.
