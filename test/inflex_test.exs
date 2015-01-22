@@ -71,4 +71,10 @@ defmodule InflexTest do
     assert "elixir_inflex" == underscore("Elixir-Inflex")
   end
 
+  test :inflect do
+    assert "child" == inflect("children", 1)
+    assert "people" == inflect("person", 2)
+    assert "dogs" == inflect("dog", 3.2)
+  end
+
 end
