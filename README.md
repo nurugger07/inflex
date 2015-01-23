@@ -59,6 +59,16 @@ iex(4)> Inflex.pluralize("person")
 
 ```
 
+### Inflect
+
+``` elixir
+iex(1)> Inflex.inflect("child", 1)
+"child"
+
+iex(2)> Inflex.inflect("child", 2)
+"children"
+```
+
 ### Camelize & Pascalize
 
 Inflex also camelizes or pascalizes strings and atoms.
