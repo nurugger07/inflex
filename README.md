@@ -8,7 +8,7 @@ You can add Inflex as a dependency in your `mix.exs` file. Since it only require
 
 ```elixir
 def deps do
-  [ { :inflex, "~> 0.2.5" } ]
+  [ { :inflex, "~> 1.0.0" } ]
 end
 ```
 
