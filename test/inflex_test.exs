@@ -35,7 +35,7 @@ defmodule InflexTest do
     assert "criteria" == pluralize("criterion")
     assert "radii" == pluralize("radius")
     assert "classes" == pluralize("class")
-    assert "seamen" == singularize("seaman")
+    assert "seamen" == pluralize("seaman")
   end
 
   test :skip_singularize do
