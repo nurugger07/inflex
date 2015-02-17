@@ -22,7 +22,9 @@ defmodule InflexTest do
     assert "seaman" == singularize("seamen")
     assert "man" == singularize("men")
     assert "abdomen" == singularize("abdomens")
+    assert "abdomen" == singularize("abdomen")
     assert "specimen" == singularize("specimens")
+    assert "specimen" == singularize("specimen")
   end
 
   test :pluralize do
