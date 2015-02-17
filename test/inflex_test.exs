@@ -20,6 +20,9 @@ defmodule InflexTest do
     assert "class" == singularize("classes")
     assert "woman" == singularize("women")
     assert "seaman" == singularize("seamen")
+    assert "man" == singularize("men")
+    assert "abdomen" == singularize("abdomens")
+    assert "specimen" == singularize("specimens")
   end
 
   test :pluralize do
@@ -38,6 +41,10 @@ defmodule InflexTest do
     assert "classes" == pluralize("class")
     assert "women" == pluralize("woman")
     assert "seamen" == pluralize("seaman")
+    assert "men" == pluralize("men")
+    assert "women" == pluralize("women")
+    assert "abdomens" == pluralize("abdomen")
+    assert "specimens" == pluralize("specimen")
   end
 
   test :skip_singularize do

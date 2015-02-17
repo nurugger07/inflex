@@ -22,7 +22,8 @@ defmodule Inflex.Pluralize do
         { ~r/^(zombie)s$/i, "\\1" },
         { ~r/geese/i, "goose" },
         { ~r/criteria/i, "criterion" },
-        { ~r/radii/i, "radius" }
+        { ~r/radii/i, "radius" },
+        { ~r/^men/i, "man"}
         ]
 
       @plural_irregular [
@@ -30,7 +31,11 @@ defmodule Inflex.Pluralize do
         { ~r/^zombies$/i, "zombie" },
         { ~r/goose/i, "geese" },
         { ~r/criterion/i, "criteria" },
-        { ~r/radius/i, "radii" }
+        { ~r/radius/i, "radii" },
+        { ~r/man/i, "men"},
+        { ~r/^men/i, "men"},
+        { ~r/^women/i, "women"}
+
         ]
 
       @singular @irregular ++ [
@@ -60,7 +65,7 @@ defmodule Inflex.Pluralize do
 
       @plural @plural_irregular ++ [
         { ~r/(child)$/i, "\\1ren" },
-        { ~r/(wo|sea)?man$/i, "\\1men" },
+        { ~r/(wo)?man$/i, "\\1men" },
         { ~r/(m|l)ouse/i, "\\1ice" },
         { ~r/(database)s$/i, "\\1" },
         { ~r/(quiz)$/i, "\\1zes" },
