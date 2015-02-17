@@ -2,6 +2,7 @@ defmodule InflexTest do
   use ExUnit.Case
 
   use Inflex
+  require IEx
 
   test :singularize do
     assert "user" == singularize("users")
