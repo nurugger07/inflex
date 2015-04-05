@@ -18,6 +18,13 @@ defmodule InflexTest do
     assert "criterion" == singularize("criteria")
     assert "radius" == singularize("radii")
     assert "class" == singularize("classes")
+    assert "woman" == singularize("women")
+    assert "seaman" == singularize("seamen")
+    assert "man" == singularize("men")
+    assert "abdomen" == singularize("abdomens")
+    assert "abdomen" == singularize("abdomen")
+    assert "specimen" == singularize("specimens")
+    assert "specimen" == singularize("specimen")
   end
 
   test :pluralize do
@@ -34,6 +41,12 @@ defmodule InflexTest do
     assert "criteria" == pluralize("criterion")
     assert "radii" == pluralize("radius")
     assert "classes" == pluralize("class")
+    assert "women" == pluralize("woman")
+    assert "seamen" == pluralize("seaman")
+    assert "men" == pluralize("men")
+    assert "women" == pluralize("women")
+    assert "abdomens" == pluralize("abdomen")
+    assert "specimens" == pluralize("specimen")
   end
 
   test :skip_singularize do
