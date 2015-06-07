@@ -5,10 +5,9 @@ defmodule Inflex.Camelize do
       import unquote __MODULE__
 
       def camelize(word, option\\:upper) do
-        case Regex.split(~r/(?:^|[-_])/, to_string(word)) do
-          [ word ] -> word
-          words    -> words |> camelize_list(option)
-                            |> Enum.join
+        case Regex.split(~r/(?:^|[-_])|(?=[A-Z])/, to_string(word)) do
+          words -> words |> camelize_list(option)
+                         |> Enum.join
         end
       end
 
