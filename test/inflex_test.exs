@@ -58,12 +58,14 @@ defmodule InflexTest do
   end
 
   test :camelize_upper do
+    assert "Upper"          == camelize("upper")
     assert "UpperCamelCase" == camelize("upper_camel_case")
     assert "UpperCamelCase" == camelize("UpperCamelCase")
     refute "UpperCamelCase" == camelize("upper_camel_case", :lower)
   end
 
   test :camelize_lower do
+    assert "lower"          == camelize("lower", :lower)
     assert "lowerCamelCase" == camelize("lower_camel_case", :lower)
     assert "lowerCamelCase" == camelize("Lower_camel_case", :lower)
     assert "lowerCamelCase" == camelize("lowerCamelCase", :lower)
