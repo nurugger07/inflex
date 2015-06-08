@@ -47,6 +47,19 @@ defmodule InflexTest do
     assert "women" == pluralize("women")
     assert "abdomens" == pluralize("abdomen")
     assert "specimens" == pluralize("specimen")
+
+  end
+
+  test :special_case_nouns_ending_in_o do
+    assert "echo" == singularize("echoes")
+    assert "hero" == singularize("heroes")
+    assert "potato" == singularize("potatoes")
+    assert "tomato" == singularize("tomatoes")
+
+    assert "echoes" == pluralize("echo")
+    assert "heroes" == pluralize("hero")
+    assert "potatoes" == pluralize("potato")
+    assert "tomatoes" == pluralize("tomato")
   end
 
   test :skip_singularize do

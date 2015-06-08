@@ -59,6 +59,25 @@ iex(4)> Inflex.pluralize("person")
 
 ```
 
+Some other special cases are handled for nouns ending in -o and  -y
+
+```elixir
+
+
+iex(1)> Inflex.pluralize("piano")
+"pianos"
+
+iex(2)> Inflex.pluralize("hero")
+"heroes"
+
+iex(3)> Inflex.pluralize("butterfly")
+"butterflies"
+
+iex(4)> Inflex.pluralize("monkey")
+"monkeys"
+
+```
+
 ### Inflect
 
 ``` elixir
