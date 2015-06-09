@@ -28,6 +28,9 @@ defmodule Inflex.Pluralize do
         { ~r/^heroes/i, "hero"},
         { ~r/^potatoes/i, "potato"},
         { ~r/^tomatoes/i, "tomato"},
+        { ~r/^teeth/i, "tooth"},
+        { ~r/^lice/i, "louse"},
+	{ ~r/^quanta/i, "quantum"},
         ]
 
       @plural_irregular [
@@ -43,6 +46,9 @@ defmodule Inflex.Pluralize do
         { ~r/^hero/i, "heroes"},
         { ~r/^potato/i, "potatoes"},
         { ~r/^tomato/i, "tomatoes"},
+        { ~r/^tooth/i, "teeth"},
+        { ~r/^louse/i, "lice"},
+	{ ~r/^quanta/i, "quantum"},
         ]
 
       @singular @irregular ++ [
