@@ -55,11 +55,13 @@ defmodule InflexTest do
     assert "hero" == singularize("heroes")
     assert "potato" == singularize("potatoes")
     assert "tomato" == singularize("tomatoes")
+    assert "tooth" == singularize("teeth")
 
     assert "echoes" == pluralize("echo")
     assert "heroes" == pluralize("hero")
     assert "potatoes" == pluralize("potato")
     assert "tomatoes" == pluralize("tomato")
+    assert "teeth" == pluralize("tooth")
   end
 
   test :skip_singularize do
