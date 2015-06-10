@@ -25,6 +25,7 @@ defmodule InflexTest do
     assert "abdomen" == singularize("abdomen")
     assert "specimen" == singularize("specimens")
     assert "specimen" == singularize("specimen")
+    assert "louse" == singularize("lice")
   end
 
   test :pluralize do
@@ -47,7 +48,7 @@ defmodule InflexTest do
     assert "women" == pluralize("women")
     assert "abdomens" == pluralize("abdomen")
     assert "specimens" == pluralize("specimen")
-
+    assert "lice" == pluralize("louse")
   end
 
   test :special_case_nouns_ending_in_o do
