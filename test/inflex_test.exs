@@ -25,6 +25,8 @@ defmodule InflexTest do
     assert "abdomen" == singularize("abdomen")
     assert "specimen" == singularize("specimens")
     assert "specimen" == singularize("specimen")
+    assert "louse" == singularize("lice")
+    assert "quantum" == singularize("quanta")
   end
 
   test :pluralize do
@@ -47,7 +49,8 @@ defmodule InflexTest do
     assert "women" == pluralize("women")
     assert "abdomens" == pluralize("abdomen")
     assert "specimens" == pluralize("specimen")
-
+    assert "lice" == pluralize("louse")
+    assert "quantum" == singularize("quanta")
   end
 
   test :special_case_nouns_ending_in_o do
@@ -55,11 +58,13 @@ defmodule InflexTest do
     assert "hero" == singularize("heroes")
     assert "potato" == singularize("potatoes")
     assert "tomato" == singularize("tomatoes")
+    assert "tooth" == singularize("teeth")
 
     assert "echoes" == pluralize("echo")
     assert "heroes" == pluralize("hero")
     assert "potatoes" == pluralize("potato")
     assert "tomatoes" == pluralize("tomato")
+    assert "teeth" == pluralize("tooth")
   end
 
   test :skip_singularize do
