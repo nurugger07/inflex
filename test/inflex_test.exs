@@ -30,6 +30,7 @@ defmodule InflexTest do
     assert "foot" == singularize("feet")
     assert "die" == singularize("dice")
     assert "phenomenon" == singularize("phenomena")
+    assert "license" == singularize("licenses")
   end
 
   test :pluralize do
