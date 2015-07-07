@@ -78,7 +78,7 @@ defmodule Inflex.Pluralize do
         { ~r/(x|ch|ss|sh)es$/i, "\\1" },
         { ~r/(shoe)s$/i, "\\1" },
         { ~r/(o)es$/i, "\\1" },
-        { ~r/(m|l)ice/i, "\\1ouse" },
+        { ~r/^(m|l)ice/i, "\\1ouse" },
         { ~r/s$/i, "" },
         ]
 
