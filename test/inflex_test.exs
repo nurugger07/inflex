@@ -31,6 +31,8 @@ defmodule InflexTest do
     assert "die" == singularize("dice")
     assert "phenomenon" == singularize("phenomena")
     assert "license" == singularize("licenses")
+
+    assert "bus" == singularize(:buses)
   end
 
   test :pluralize do
@@ -58,6 +60,8 @@ defmodule InflexTest do
     assert "feet" == pluralize("foot")
     assert "dice" == pluralize("die")
     assert "phenomena" == pluralize("phenomenon")
+
+    assert "buses" == pluralize(:bus)
   end
 
   test :special_case_nouns_ending_in_o do
