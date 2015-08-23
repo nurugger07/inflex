@@ -104,9 +104,14 @@ defmodule Inflex.Pluralize do
         { ~r/$/i, "s" },
         ]
 
-
+      def singularize(word) when is_atom(word) do
+        find_match(@singular, to_string(word))
+      end
       def singularize(word), do: find_match(@singular, word)
 
+      def pluralize(word) when is_atom(word) do
+        find_match(@plural, to_string(word))
+      end
       def pluralize(word), do: find_match(@plural, word)
 
       def inflect(word, 1), do: singularize word
