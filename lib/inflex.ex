@@ -1,15 +1,6 @@
 defmodule Inflex do
-  use Inflex.Camelize
-  use Inflex.Pluralize
-  use Inflex.Parameterize
-  use Inflex.Underscore
-
-  defmacro __using__([]) do
-    quote do
-      use Inflex.Camelize
-      use Inflex.Pluralize
-      use Inflex.Parameterize
-      use Inflex.Underscore
-    end
-  end
+  defdelegate [camelize(word), camelize(word, option)], to: Inflex.Camelize
+  defdelegate [singularize(word), pluralize(word), inflect(word, count)], to: Inflex.Pluralize
+  defdelegate [parameterize(word), parameterize(word, option)], to: Inflex.Parameterize
+  defdelegate underscore(word), to: Inflex.Underscore
 end
