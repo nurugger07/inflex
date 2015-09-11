@@ -1,4 +1,5 @@
 defmodule Inflex.Pluralize do
+  @moduledoc false
   @default true
 
   @uncountable  [

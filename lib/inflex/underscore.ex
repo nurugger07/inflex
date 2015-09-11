@@ -1,4 +1,6 @@
 defmodule Inflex.Underscore do
+  @moduledoc false
+
   def underscore(atom) when is_atom(atom) do
     case Atom.to_string(atom) do
       "Elixir." <> rest -> underscore(rest)
