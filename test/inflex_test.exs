@@ -117,6 +117,32 @@ defmodule InflexTest do
     assert "elixir_inflex" == underscore("Elixir-Inflex")
   end
 
+  test :ordinalize do
+    assert "1st" == ordinalize(1)
+    assert "2nd" == ordinalize(2)
+    assert "3rd" == ordinalize(3)
+    assert "4th" == ordinalize(4)
+    assert "7th" == ordinalize(7)
+    assert "8th" == ordinalize(8)
+    assert "10th" == ordinalize(10)
+    assert "11th" == ordinalize(11)
+    assert "12th" == ordinalize(12)
+    assert "15th" == ordinalize(15)
+    assert "17th" == ordinalize(17)
+    assert "20th" == ordinalize(20)
+    assert "21st" == ordinalize(21)
+    assert "22nd" == ordinalize(22)
+    assert "23rd" == ordinalize(23)
+    assert "26th" == ordinalize(26)
+    assert "33rd" == ordinalize(33)
+    assert "34th" == ordinalize(34)
+    assert "35th" == ordinalize(35)
+    assert "41st" == ordinalize(41)
+    assert "85th" == ordinalize(85)
+    assert "90th" == ordinalize(90)
+    assert "92nd" == ordinalize(92)
+  end
+
   test :inflect do
     assert "child" == inflect("children", 1)
     assert "people" == inflect("person", 2)
