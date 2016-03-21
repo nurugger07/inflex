@@ -76,4 +76,18 @@ defmodule Inflex do
       "pascal_case"
   """
   defdelegate underscore(word), to: Inflex.Underscore
+
+
+  @doc """
+  Converts an integer to a ordinal value.
+
+  ## Examples
+
+      iex> Inflex.ordinalize(1)
+      "1st"
+
+      iex> Inflex.ordinalize(11)
+      "11th"
+  """
+  defdelegate ordinalize(number), to: Inflex.Ordinalize
 end
