@@ -80,7 +80,7 @@ defmodule Inflex.Pluralize do
 
   @plural @plural_irregular ++ [
     { ~r/(child)$/i, "\\1ren" },
-    { ~r/(wo)?man$/i, "\\1men" },
+    { ~r/man$/i, "men" },
     { ~r/(m|l)ouse/i, "\\1ice" },
     { ~r/(database)s$/i, "\\1" },
     { ~r/(quiz)$/i, "\\1zes" },
