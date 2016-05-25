@@ -40,7 +40,6 @@ defmodule Inflex.Pluralize do
     { ~r/goose/i, "geese" },
     { ~r/criterion/i, "criteria" },
     { ~r/radius/i, "radii" },
-    { ~r/man/i, "men"},
     { ~r/^men/i, "men"},
     { ~r/^women/i, "women"},
     { ~r/^echo/i, "echoes"},
