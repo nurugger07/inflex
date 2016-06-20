@@ -10,7 +10,8 @@ defmodule Inflex do
       iex> Inflex.camelize("pascal-case", :lower)
       "pascalCase"
   """
-  defdelegate [camelize(word), camelize(word, option)], to: Inflex.Camelize
+  defdelegate camelize(word), to: Inflex.Camelize
+  defdelegate camelize(word, option), to: Inflex.Camelize
 
   @doc """
   Singularize a word.
@@ -62,7 +63,8 @@ defmodule Inflex do
       iex> Inflex.parameterize("String with underscore", "_")
       "string_with_underscore"
   """
-  defdelegate [parameterize(word), parameterize(word, option)], to: Inflex.Parameterize
+  defdelegate parameterize(word), to: Inflex.Parameterize
+  defdelegate parameterize(word, option), to: Inflex.Parameterize
 
   @doc """
   Underscore and lowercase a string.
