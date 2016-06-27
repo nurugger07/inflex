@@ -92,7 +92,7 @@ iex(2)> Inflex.inflect("child", 2)
 
 Inflex also camelizes or pascalizes strings and atoms.
 
-```
+```elixir
 
 iex(1)> Inflex.camelize(:upper_camel_case)
 "UpperCamelCase"
@@ -106,7 +106,7 @@ iex(2)> Inflex.camelize("pascal-case", :lower)
 
 Strings can be parameterized easily.
 
-```
+```elixir
 
 iex(1)> Inflex.parameterize("String for parameter")
 "string-for-parameter"
@@ -120,7 +120,7 @@ iex(2)> Inflex.parameterize("String with underscore", "_")
 
 Makes an underscored, lowercase form from a string or atom.
 
-```
+```elixir
 
 iex(1)> Inflex.underscore("UpperCamelCase")
 "upper_camel_case"
