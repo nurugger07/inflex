@@ -57,7 +57,7 @@ defmodule Inflex.Pluralize do
   @singular @irregular ++ [
     { ~r/(child)ren/i, "\\1" },
     { ~r/(wo|sea)men$/i, "\\1man" },
-    { ~r/(m|l)ice$/i, "\\1ouse" },
+    { ~r/^(m|l)ice$/i, "\\1ouse" },
     { ~r/(bus)(es)?$/i, "\\1" },
     { ~r/(ss)$/i, "\\1" },
     { ~r/(database)s$/i, "\\1" },
