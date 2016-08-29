@@ -27,6 +27,7 @@ defmodule InflexTest do
     assert "specimen" == singularize("specimen")
     assert "manager" == singularize("manager")
     assert "manager" == singularize("managers")
+    assert "Person" == singularize("People")
     assert "louse" == singularize("lice")
     assert "quantum" == singularize("quanta")
     assert "foot" == singularize("feet")
@@ -150,6 +151,7 @@ defmodule InflexTest do
   test :inflect do
     assert "child" == inflect("children", 1)
     assert "people" == inflect("person", 2)
+    assert "People" == inflect("Person", 2)
     assert "dogs" == inflect("dog", 3.2)
     assert "slice" == inflect("slice", 1)
     assert "accomplice" == inflect("accomplice", 1)
