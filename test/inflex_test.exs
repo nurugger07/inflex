@@ -111,6 +111,7 @@ defmodule InflexTest do
     assert "elixir-inflex" == parameterize("Elixir Inflex")
     assert "elixir_inflex" == parameterize("elixir inflex", "_")
     assert "elixir-inflex" == parameterize("elixir%20inflex")
+    assert "elixir-inflex" == parameterize("elixir:inflex")
   end
 
   test :underscore do
