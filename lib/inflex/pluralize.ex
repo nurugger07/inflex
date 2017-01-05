@@ -134,5 +134,7 @@ defmodule Inflex.Pluralize do
   end
   defp replace(_, word), do: word
 
-  defp uncountable?(word), do: Enum.member?(@uncountable, word)
+  defp uncountable?(word) do
+    not Regex.match?(~r/^\w+$/, word) || Enum.member?(@uncountable, word)
+  end
 end
