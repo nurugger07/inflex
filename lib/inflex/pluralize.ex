@@ -98,6 +98,7 @@ defmodule Inflex.Pluralize do
     { ~r/(ax|test)is$/i, "\\1es" },
     { ~r/(bus)$/i, "\\1es" },
     { ~r/s$/i, "s" },
+    { ~r/data$/i, "data" },
     { ~r/$/i, "s" },
     ]
 
