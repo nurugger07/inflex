@@ -62,7 +62,7 @@ defmodule Inflex.Pluralize do
     { ~r/(ss)$/i, "\\1" },
     { ~r/(database)s$/i, "\\1" },
     { ~r/(n)ews$/i, "\\1ews" },
-    { ~r/([ti])a$/i, "\1um" },
+    { ~r/([ti])a$/i, "\\1um" },
     { ~r/((a)naly|(b)a|(d)iagno|(p)arenthe|(p)rogno|(s)ynop|(t)he)(sis|ses)$/i, "\\1sis" },
     { ~r/(analy)(sis|ses)$/i, "\\1sis" },
     { ~r/(octop|vir)i$/i, "\\1us" },
