@@ -4,6 +4,23 @@ defmodule InflexTest do
   import Inflex
 
   test :singularize do
+    assert "addendum" == singularize("addenda")
+    assert "alga" == singularize("algae")
+    assert "alumnus" == singularize("alumni")
+    assert "amoeba" == singularize("amoebae")
+    assert "antenna" == singularize("antennae")
+    assert "bacterium" == singularize("bacteria")
+    assert "cactus" == singularize("cacti")
+    assert "curriculum" == singularize("curricula")
+    assert "datum" == singularize("data")
+    assert "fungus" == singularize("fungi")
+    assert "genus" == singularize("genera")
+    assert "larva" == singularize("larvae")
+    assert "memorandum" == singularize("memoranda")
+    assert "stimulus" == singularize("stimuli")
+    assert "syllabus" == singularize("syllabi")
+    assert "vertebra" == singularize("vertebrae")
+
     assert "user" == singularize("users")
     assert "sheep" == singularize("sheep")
     assert "mouse" == singularize("mice")
@@ -39,6 +56,23 @@ defmodule InflexTest do
   end
 
   test :pluralize do
+    assert "addenda" == pluralize("addendum")
+    assert "algae" == pluralize("alga")
+    assert "alumni" == pluralize("alumnus")
+    assert "amoebae" == pluralize("amoeba")
+    assert "antennae" == pluralize("antenna")
+    assert "bacteria" == pluralize("bacterium")
+    assert "cacti" == pluralize("cactus")
+    assert "curricula" == pluralize("curriculum")
+    assert "data" == pluralize("datum")
+    assert "fungi" == pluralize("fungus")
+    assert "genera" == pluralize("genus")
+    assert "larvae" == pluralize("larva")
+    assert "memoranda" == pluralize("memorandum")
+    assert "stimuli" == pluralize("stimulus")
+    assert "syllabi" == pluralize("syllabus")
+    assert "vertebrae" == pluralize("vertebra")
+
     assert "users" == pluralize("user")
     assert "sheep" == pluralize("sheep")
     assert "mice" == pluralize("mouse")
