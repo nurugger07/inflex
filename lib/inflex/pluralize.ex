@@ -16,11 +16,13 @@ defmodule Inflex.Pluralize do
     ]
 
   @irregular [
+    { ~r/(alumn|cact|fung|radi|stimul|syllab)i/i, "\\1us" },
+    { ~r/(alg|antenn|amoeb|larv|vertebr)ae/i, "\\1a" },
+    { ~r/^(gen)era$/i, "\\1us"},
     { ~r/(pe)ople/i, "\\1rson" },
     { ~r/^(zombie)s$/i, "\\1" },
     { ~r/(g)eese/i, "\\1oose" },
     { ~r/(criteri)a/i, "\\1on" },
-    { ~r/(radi)i/i, "\\1us" },
     { ~r/^(m)en/i, "\\1an"},
     { ~r/^(echo)es/i, "\\1"},
     { ~r/^(hero)es/i, "\\1"},
@@ -28,18 +30,20 @@ defmodule Inflex.Pluralize do
     { ~r/^(tomato)es/i, "\\1"},
     { ~r/^(t)eeth/i, "\\1ooth"},
     { ~r/^(l)ice$/i, "\\1ouse"},
-    { ~r/^(quant)a/i, "\\1um"},
+    { ~r/^(addend|bacteri|curricul|dat|memorand|quant)a$/i, "\\1um"},
     { ~r/^(di)ce/i, "\\1e"},
     { ~r/^(f)eet/i, "\\1oot"},
     { ~r/^(phenomen)a/i, "\\1on"},
     ]
 
   @plural_irregular [
+    { ~r/(alumn|cact|fung|radi|stimul|syllab)us/i, "\\1i" },
+    { ~r/(alg|antenn|amoeb|larv|vertebr)a/i, "\\1ae" },
+    { ~r/^(gen)us$/i, "\\1era"},
     { ~r/(pe)rson/i, "\\1ople" },
     { ~r/^(zombie)s$/i, "\\1" },
     { ~r/(g)oose/i, "\\1eese" },
     { ~r/(criteri)on/i, "\\1a" },
-    { ~r/(radi)us/i, "\\1i" },
     { ~r/^(men)/i, "\\1"},
     { ~r/^(women)/i, "\\1"},
     { ~r/^(echo)/i, "\\1es"},
@@ -48,7 +52,7 @@ defmodule Inflex.Pluralize do
     { ~r/^(tomato)/i, "\\1es"},
     { ~r/^(t)ooth/i, "\\1eeth"},
     { ~r/^(l)ouse/i, "\\1ice"},
-    { ~r/^(quant)um/i, "\\1a"},
+    { ~r/^(addend|bacteri|curricul|dat|memorand|quant)um$/i, "\\1a"},
     { ~r/^(di)e/i, "\\1ce"},
     { ~r/^(f)oot/i, "\\1eet"},
     { ~r/^(phenomen)on/i, "\\1a"},
