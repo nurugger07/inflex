@@ -81,10 +81,18 @@ defmodule InflexTest do
     assert "potatoes" == pluralize("potato")
     assert "tomatoes" == pluralize("tomato")
     assert "teeth" == pluralize("tooth")
+
+    assert "statuses" == pluralize("status")
+    assert "aliases" == pluralize("alias")
+    assert "canvases" == pluralize("canvas")
   end
 
   test :skip_singularize do
     assert "dog" == singularize("dog")
+
+    assert "status" == singularize("status")
+    assert "alias" == singularize("alias")
+    assert "canvas" == singularize("canvas")
   end
 
   test :skip_pluralize do
