@@ -1,4 +1,4 @@
-# Inflex[![Build Status](https://travis-ci.org/nurugger07/inflex.png?branch=master)](https://travis-ci.org/nurugger07/inflex)
+# Inflex [![Build Status](https://travis-ci.org/nurugger07/inflex.svg?branch=master)](https://travis-ci.org/nurugger07/inflex)
 
 An Elixir library for handling word inflections.
 
