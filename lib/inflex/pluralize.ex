@@ -23,7 +23,7 @@ defmodule Inflex.Pluralize do
     { ~r/^(zombie)s$/i, "\\1" },
     { ~r/(g)eese/i, "\\1oose" },
     { ~r/(criteri)a/i, "\\1on" },
-    { ~r/^(m)en/i, "\\1an"},
+    { ~r/^(m)en$/i, "\\1an"},
     { ~r/^(echo)es/i, "\\1"},
     { ~r/^(hero)es/i, "\\1"},
     { ~r/^(potato)es/i, "\\1"},

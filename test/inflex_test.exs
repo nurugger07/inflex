@@ -4,6 +4,7 @@ defmodule InflexTest do
   import Inflex
 
   test :singularize do
+    assert "Menu" == singularize("Menus")
     assert "addendum" == singularize("addenda")
     assert "alga" == singularize("algae")
     assert "alumnus" == singularize("alumni")
