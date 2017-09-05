@@ -3,6 +3,7 @@ defmodule Inflex.Pluralize do
   @default true
 
   @uncountable  [
+    "aircraft",
     "equipment",
     "fish",
     "information",
