@@ -3,7 +3,7 @@ defmodule Inflex.Ordinalize do
 
   def ordinalize(number) when is_number(number) do
     cond do
-      number in [11, 12, 13] ->
+      rem(number, 100) in 11..13 ->
         Integer.to_string(number) <> "th"
       rem(number, 10) == 1 ->
         Integer.to_string(number) <> "st"
