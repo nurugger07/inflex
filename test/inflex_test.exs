@@ -4,7 +4,6 @@ defmodule InflexTest do
   import Inflex
 
   test :singularize do
-    assert "Menu" == singularize("Menus")
     assert "addendum" == singularize("addenda")
     assert "alga" == singularize("algae")
     assert "alumnus" == singularize("alumni")
@@ -18,6 +17,7 @@ defmodule InflexTest do
     assert "genus" == singularize("genera")
     assert "larva" == singularize("larvae")
     assert "memorandum" == singularize("memoranda")
+    assert "menu" == singularize("menus")
     assert "stimulus" == singularize("stimuli")
     assert "syllabus" == singularize("syllabi")
     assert "vertebra" == singularize("vertebrae")
@@ -71,6 +71,7 @@ defmodule InflexTest do
     assert "genera" == pluralize("genus")
     assert "larvae" == pluralize("larva")
     assert "memoranda" == pluralize("memorandum")
+    assert "menus" == pluralize("menu")
     assert "stimuli" == pluralize("stimulus")
     assert "syllabi" == pluralize("syllabus")
     assert "vertebrae" == pluralize("vertebra")
