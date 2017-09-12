@@ -171,6 +171,12 @@ defmodule InflexTest do
   end
 
   test :ordinalize do
+    assert "-113th" == ordinalize(-113)
+    assert "-112th" == ordinalize(-112)
+    assert "-111th" == ordinalize(-111)
+    assert "-3rd" == ordinalize(-3)
+    assert "-2nd" == ordinalize(-2)
+    assert "-1st" == ordinalize(-1)
     assert "1st" == ordinalize(1)
     assert "2nd" == ordinalize(2)
     assert "3rd" == ordinalize(3)
@@ -194,6 +200,9 @@ defmodule InflexTest do
     assert "85th" == ordinalize(85)
     assert "90th" == ordinalize(90)
     assert "92nd" == ordinalize(92)
+    assert "111th" == ordinalize(111)
+    assert "112th" == ordinalize(112)
+    assert "113th" == ordinalize(113)
   end
 
   test :inflect do
