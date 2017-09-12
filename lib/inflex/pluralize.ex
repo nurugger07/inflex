@@ -4,6 +4,7 @@ defmodule Inflex.Pluralize do
 
   @uncountable  [
     "deer",
+    "aircraft",
     "equipment",
     "fish",
     "information",

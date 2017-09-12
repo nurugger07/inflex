@@ -135,6 +135,7 @@ defmodule InflexTest do
 
   test :skip_pluralize do
     assert "deer" == pluralize("deer")
+    assert "aircraft" == pluralize("aircraft")
     assert "dogs" == pluralize("dogs")
   end
 
