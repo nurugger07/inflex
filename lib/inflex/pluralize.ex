@@ -3,18 +3,31 @@ defmodule Inflex.Pluralize do
   @default true
 
   @uncountable  [
-    "deer",
     "aircraft",
+    "bellows",
+    "bison",
+    "deer",
     "equipment",
     "fish",
+    "hovercraft",
     "information",
     "jeans",
+    "means",
+    "measles",
     "money",
+    "moose",
+    "news",
+    "pants",
     "police",
     "rice",
     "series",
     "sheep",
-    "species"
+    "spacecraft",
+    "species",
+    "swine",
+    "tights",
+    "tongs",
+    "trousers"
     ]
 
   @irregular [
@@ -67,7 +80,6 @@ defmodule Inflex.Pluralize do
     { ~r/(bus|canvas|status|alias)(es)?$/i, "\\1" },
     { ~r/(ss)$/i, "\\1" },
     { ~r/(database)s$/i, "\\1" },
-    { ~r/(n)ews$/i, "\\1ews" },
     { ~r/([ti])a$/i, "\\1um" },
     { ~r/((a)naly|(b)a|(d)iagno|(p)arenthe|(p)rogno|(s)ynop|(t)he)(sis|ses)$/i, "\\1sis" },
     { ~r/(analy)(sis|ses)$/i, "\\1sis" },
