@@ -108,6 +108,34 @@ defmodule InflexTest do
     assert "buses" == pluralize(:bus)
   end
 
+  test :special_case_nouns_ending_in_f_or_fe do
+    assert "life" == singularize("lives")
+    assert "knife" == singularize("knives")
+    assert "hoof" == singularize("hooves")
+    assert "roof" == singularize("roofs")
+    assert "loof" == singularize("loofs")
+    assert "wolf" == singularize("wolves")
+    assert "calf" == singularize("calves")
+    assert "scarf" == singularize("scarfs")
+    assert "scurf" == singularize("scurfs")
+    assert "wharf" == singularize("wharves")
+    assert "loaf" == singularize("loaves")
+    assert "leaf" == singularize("leaves")
+
+    assert "lives" == pluralize("life")
+    assert "knives" == pluralize("knife")
+    assert "hooves" == pluralize("hoof")
+    assert "roofs" == pluralize("roof")
+    assert "loofs" == pluralize("loof")
+    assert "wolves" == pluralize("wolf")
+    assert "calves" == pluralize("calf")
+    assert "scarfs" == pluralize("scarf")
+    assert "scurfs" == pluralize("scurf")
+    assert "wharves" == pluralize("wharf")
+    assert "loaves" == pluralize("loaf")
+    assert "leaves" == pluralize("leaf")
+  end
+
   test :special_case_nouns_ending_in_o do
     assert "echo" == singularize("echoes")
     assert "hero" == singularize("heroes")
