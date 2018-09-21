@@ -55,6 +55,8 @@ defmodule InflexTest do
     assert "license" == singularize("licenses")
 
     assert "bus" == singularize(:buses)
+    assert "reserve" == singularize("reserves")
+    assert "nerve" == singularize("nerves")
   end
 
   test :pluralize do
@@ -106,6 +108,8 @@ defmodule InflexTest do
     assert "phenomena" == pluralize("phenomenon")
 
     assert "buses" == pluralize(:bus)
+    assert "reserves" == pluralize("reserve")
+    assert "nerves" == pluralize("nerve")
   end
 
   test :special_case_nouns_ending_in_f_or_fe do

@@ -86,6 +86,7 @@ defmodule Inflex.Pluralize do
     { ~r/(octop|vir)i$/i, "\\1us" },
     { ~r/(hive)s$/i, "\\1" },
     { ~r/(tive)s$/i, '\\1' },
+    { ~r/(er)ves$/i, "\\1ve" },
     { ~r/([lora])ves$/i, "\\1f" },
     { ~r/([^f])ves$/i, "\\1fe" },
     { ~r/([^aeiouy]|qu)ies$/i, "\\1y" },
