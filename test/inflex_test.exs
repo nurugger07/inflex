@@ -57,6 +57,7 @@ defmodule InflexTest do
     assert "bus" == singularize(:buses)
     assert "reserve" == singularize("reserves")
     assert "nerve" == singularize("nerves")
+    assert "representative" == singularize("representatives")
   end
 
   test :pluralize do
