@@ -79,7 +79,6 @@ defmodule Inflex do
   """
   defdelegate underscore(word), to: Inflex.Underscore
 
-
   @doc """
   Converts an integer to a ordinal value.
 
