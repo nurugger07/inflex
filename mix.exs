@@ -6,7 +6,7 @@ defmodule Inflex.Mixfile do
   def project do
     [
       app: :inflex,
-      version: "1.10.0",
+      version: "2.0.0",
       elixir: ">= 1.0.0",
       deps: deps(),
       package: [
@@ -32,6 +32,6 @@ defmodule Inflex.Mixfile do
   end
 
   def deps do
-    [{:ex_doc, ">= 0.0.0", only: :dev}]
+    [{:ex_doc, "~> 0.19", only: :dev}]
   end
 end
