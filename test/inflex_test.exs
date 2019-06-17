@@ -158,6 +158,22 @@ defmodule InflexTest do
     assert "canvases" == pluralize("canvas")
   end
 
+  test :pluralize_only_at_the_end_of_the_word do
+    assert "leaflets" == pluralize("leaflet")
+    assert "personalities" == pluralize("personality")
+    assert "diets" == pluralize("diet")
+    assert "footers" == pluralize("footer")
+    assert "toothpicks" == pluralize("toothpick")
+    assert "echograms" == pluralize("echogram")
+    assert "herons" == pluralize("heron")
+    assert "gooseberries" == pluralize("gooseberry")
+    assert "womanizers" == pluralize("womanizer")
+  end
+
+  test :singularize_only_at_the_end_of_the_word do
+    assert "general" == singularize("generals")
+  end
+
   test :skip_singularize do
     assert "dog" == singularize("dog")
 
