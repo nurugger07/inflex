@@ -211,6 +211,13 @@ defmodule InflexTest do
     assert "elixir-inflex" == parameterize("elixir%20inflex")
   end
 
+  test :parameterize_to_ascii do
+    assert "elixir-inflex" == parameterize_to_ascii("elixir inflex")
+    assert "elixir-inflex" == parameterize_to_ascii("Elixir Inflex")
+    assert "elixir_inflex" == parameterize_to_ascii("elixir inflex", "_")
+    assert "elixir-inflex" == parameterize_to_ascii("elixir%20inflex")
+  end
+
   test :underscore do
     assert "upper_camel_case" == underscore("UpperCamelCase")
     assert "lower_camel_case" == underscore("lowerCamelCase")

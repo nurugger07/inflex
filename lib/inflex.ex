@@ -53,7 +53,8 @@ defmodule Inflex do
   defdelegate inflect(word, count), to: Inflex.Pluralize
 
   @doc """
-  Parameterize a string given some separator.
+  Parameterize a string given some separator. If you want to return
+  as only ascii characters, use `parameterize_to_ascii/2`
 
   ## Examples
 
@@ -65,6 +66,8 @@ defmodule Inflex do
   """
   defdelegate parameterize(word), to: Inflex.Parameterize
   defdelegate parameterize(word, option), to: Inflex.Parameterize
+  defdelegate parameterize_to_ascii(word), to: Inflex.Parameterize
+  defdelegate parameterize_to_ascii(word, option), to: Inflex.Parameterize
 
   @doc """
   Underscore and lowercase a string.
