@@ -11,7 +11,7 @@ defmodule Inflex.Camelize do
     end
   end
 
-  defp camelize_list([], :upper), do: []
+  defp camelize_list([], _), do: []
 
   defp camelize_list([h | tail], :lower) do
     [lowercase(h)] ++ camelize_list(tail, :upper)
