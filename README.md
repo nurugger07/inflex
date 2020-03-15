@@ -28,10 +28,10 @@ To incorporate Inflex in your modules, use `import`.
 
 ``` elixir
 
-  defmodule YourModule do
+  defmodule Blog do
     import Inflex
 
-    def make_singular(word), do: singularize(word)
+    def greeting(count), do: "You are the #{ordinalize(count)} visitor!"
 
   end
 
