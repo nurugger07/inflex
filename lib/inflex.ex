@@ -1,16 +1,26 @@
 defmodule Inflex do
   @doc """
-  Camelizes or pascalizes strings and atoms.
+  Camelizes or pascalizes strings and atoms to upper-case CamelCase.
 
   ## Examples
 
       iex> Inflex.camelize(:upper_camel_case)
       "UpperCamelCase"
+  """
+  defdelegate camelize(word), to: Inflex.Camelize
+
+  @doc """
+  Camelizes or pascalizes strings and atoms.
+
+  ## Options
+
+  * `:lower` - Lower-cases the first letter.
+
+  ## Examples
 
       iex> Inflex.camelize("pascal-case", :lower)
       "pascalCase"
   """
-  defdelegate camelize(word), to: Inflex.Camelize
   defdelegate camelize(word, option), to: Inflex.Camelize
 
   @doc """
@@ -53,20 +63,53 @@ defmodule Inflex do
   defdelegate inflect(word, count), to: Inflex.Pluralize
 
   @doc """
-  Parameterize a string given some separator. If you want to return
+  Parameterize a string using a hyphen (`-`) separator. If you want to return
   as only ascii characters, use `parameterize_to_ascii/2`
 
   ## Examples
 
       iex> Inflex.parameterize("String for parameter")
       "string-for-parameter"
+  """
+  defdelegate parameterize(word), to: Inflex.Parameterize
+
+  @doc """
+  Parameterize a string given some separator. If you want to return
+  as only ascii characters, use `parameterize_to_ascii/2`
+
+  The `option` argument is a string representing the character that
+  will be used as the separator.
+
+  ## Examples
 
       iex> Inflex.parameterize("String with underscore", "_")
       "string_with_underscore"
   """
-  defdelegate parameterize(word), to: Inflex.Parameterize
   defdelegate parameterize(word, option), to: Inflex.Parameterize
+
+  @doc """
+  Parameterize a string using a hyphen (`-`) separator, returning
+  only ascii characters.
+
+  ## Examples
+
+      iex> Inflex.parameterize_to_ascii("String for parameter 😎")
+      "string-for-parameter-"
+  """
   defdelegate parameterize_to_ascii(word), to: Inflex.Parameterize
+
+  @doc """
+  Parameterize a string given some separator, returning only ascii
+  characters.
+
+  The `option` argument is a string representing the character that
+  will be used as the separator.
+
+  ## Examples
+
+      iex> Inflex.parameterize_to_ascii("String with underscore 😎", "_")
+      "string_with_underscore_"
+  """
   defdelegate parameterize_to_ascii(word, option), to: Inflex.Parameterize
 
   @doc """
