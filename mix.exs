@@ -1,4 +1,4 @@
-Code.ensure_loaded?(Hex) and Hex.start
+Code.ensure_loaded?(Hex) and Hex.start()
 
 defmodule Inflex.Mixfile do
   use Mix.Project
@@ -13,16 +13,16 @@ defmodule Inflex.Mixfile do
         files: ["lib", "mix.exs", "README*", "LICENSE*"],
         contributors: ["Johnny Winn"],
         licenses: ["Apache 2.0"],
-        links: %{ "GitHub" => "https://github.com/nurugger07/inflex" },
+        links: %{"GitHub" => "https://github.com/nurugger07/inflex"},
         maintainers: ["Johnny Winn"]
       ],
       name: "Inflex",
       source_url: "https://github.com/nurugger07/inflex",
-      docs: [main: "Inflex", # The main page in the docs
-             extras: ["README.md"]],
+      # The main page in the docs
+      docs: [main: "Inflex", extras: ["README.md"]],
       description: """
       An Elixir library for handling word inflections.
-      """,
+      """
     ]
   end
 
@@ -32,6 +32,6 @@ defmodule Inflex.Mixfile do
   end
 
   def deps do
-    [{:ex_doc, "~> 0.19", only: :dev}]
+    [{:ex_doc, "~> 0.22", only: :dev}]
   end
 end
