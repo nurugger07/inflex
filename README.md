@@ -36,6 +36,11 @@ end
 
 Then run `mix deps.get` in the shell to fetch and compile the dependencies.
 
+### Requirements
+
+Although Inflex supports Elixir 1.6, which is [compatible](https://hexdocs.pm/elixir/compatibility-and-deprecations.html#compatibility-between-elixir-and-erlang-otp) with Erlang/OTP 19–20, [Inflex requires Erlang/OTP 20+](https://github.com/nurugger07/inflex/blob/master/lib/inflex/parameterize.ex#L21).
+
+
 To incorporate Inflex in your modules, use `import`.
 
 ```elixir
