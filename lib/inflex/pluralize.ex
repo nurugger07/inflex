@@ -187,7 +187,7 @@ defmodule Inflex.Pluralize do
 
   def pluralize(word), do: find_match(@plural, word)
 
-  def inflect(word, 1), do: singularize(word)
+  def inflect(word, n) when n == 1, do: singularize(word)
   def inflect(word, n) when is_number(n), do: pluralize(word)
 
   defp find_match(set, word) do
