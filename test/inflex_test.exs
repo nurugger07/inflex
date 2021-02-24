@@ -266,11 +266,14 @@ defmodule InflexTest do
 
   test :inflect do
     assert "child" == inflect("children", 1)
+    assert "child" == inflect("children", 1.0)
     assert "people" == inflect("person", 2)
     assert "People" == inflect("Person", 2)
     assert "dogs" == inflect("dog", 3.2)
     assert "slice" == inflect("slice", 1)
+    assert "slice" == inflect("slice", 1.0)
     assert "accomplice" == inflect("accomplice", 1)
+    assert "accomplice" == inflect("accomplice", 1.0)
   end
 
 end
