@@ -1,8 +1,10 @@
 defmodule Inflex.Camelize do
   @moduledoc false
 
+  @camelize_regex ~r/(?:^|[-_])|(?=[A-Z][a-z])/
+
   def camelize(word, option \\ :upper) do
-    case Regex.split(~r/(?:^|[-_])|(?=[A-Z])/, to_string(word)) do
+    case Regex.split(@camelize_regex, to_string(word)) do
       words ->
         words
         |> Enum.filter(&(&1 != ""))
