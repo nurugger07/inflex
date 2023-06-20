@@ -21,6 +21,7 @@ defmodule InflexTest do
     assert "stimulus" == singularize("stimuli")
     assert "syllabus" == singularize("syllabi")
     assert "vertebra" == singularize("vertebrae")
+    assert "drive" == singularize("drives")
 
     assert "user" == singularize("users")
     assert "sheep" == singularize("sheep")
@@ -78,6 +79,7 @@ defmodule InflexTest do
     assert "stimuli" == pluralize("stimulus")
     assert "syllabi" == pluralize("syllabus")
     assert "vertebrae" == pluralize("vertebra")
+    assert "drives" == pluralize("drive")
 
     assert "users" == pluralize("user")
     assert "sheep" == pluralize("sheep")
