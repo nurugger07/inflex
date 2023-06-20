@@ -36,6 +36,7 @@ defmodule Inflex.Pluralize do
     {~r/^(gen)era$/i, "\\1us"},
     {~r/(pe)ople/i, "\\1rson"},
     {~r/^(zombie)s$/i, "\\1"},
+    {~r/^(drive)s$/i, "\\1"},
     {~r/(g)eese/i, "\\1oose"},
     {~r/(criteri)a/i, "\\1on"},
     {~r/^(m)en$/i, "\\1an"},
