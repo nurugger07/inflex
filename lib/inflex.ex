@@ -8,6 +8,9 @@ defmodule Inflex do
   @doc """
   Camelizes or pascalizes strings and atoms to upper-case CamelCase.
 
+  @see `Inflex.Camelize.camelize/2` for more information.
+
+
   ## Examples
 
       iex> Inflex.camelize(:upper_camel_case)
@@ -18,6 +21,8 @@ defmodule Inflex do
 
   @doc """
   Camelizes or pascalizes strings and atoms.
+
+  @see `Inflex.Camelize.camelize/2` for more information.
 
   ## Options
 
@@ -34,6 +39,8 @@ defmodule Inflex do
   @doc """
   Singularize a word.
 
+  @see `Inflex.Pluralize.singularize/1` for more information.
+
   ## Examples
 
       iex> Inflex.singularize("dogs")
@@ -48,6 +55,8 @@ defmodule Inflex do
   @doc """
   Pluralize a word.
 
+  @see `Inflex.Pluralize.pluralize/1` for more information.
+
   ## Examples
 
       iex> Inflex.pluralize("dog")
@@ -61,6 +70,8 @@ defmodule Inflex do
 
   @doc """
   Inflect on the plurality of a word given some count.
+
+  @see `Inflex.Pluralize.inflect/2` for more information.
 
   ## Examples
 
@@ -77,6 +88,8 @@ defmodule Inflex do
   Parameterize a string using a hyphen (`-`) separator. If you want to return
   as only ASCII characters, use `parameterize_to_ascii/2`
 
+  @see `Inflex.Parameterize.parameterize/2` for more information.
+
   ## Examples
 
       iex> Inflex.parameterize("String for parameter")
@@ -92,6 +105,8 @@ defmodule Inflex do
   The `option` argument is a string representing the character that
   will be used as the separator.
 
+  @see `Inflex.Parameterize.parameterize/2` for more information.
+
   ## Examples
 
       iex> Inflex.parameterize("String with underscore", "_")
@@ -103,6 +118,8 @@ defmodule Inflex do
   @doc """
   Parameterize a string using a hyphen (`-`) separator, returning
   only ASCII characters.
+
+  @see `Inflex.Parameterize.parameterize_to_ascii/2` for more information.
 
   ## Examples
 
@@ -119,6 +136,8 @@ defmodule Inflex do
   The `option` argument is a string representing the character that
   will be used as the separator.
 
+  @see `Inflex.Parameterize.parameterize_to_ascii/2` for more information.
+
   ## Examples
 
       iex> Inflex.parameterize_to_ascii("String with underscore 😎", "_")
@@ -129,6 +148,8 @@ defmodule Inflex do
 
   @doc """
   Underscore and lowercase a string.
+
+  @see `Inflex.Underscore.underscore/1` for more information.
 
   ## Examples
 
@@ -143,6 +164,8 @@ defmodule Inflex do
 
   @doc """
   Converts an integer to a ordinal value.
+
+  @see `Inflex.Ordinalize.ordinalize/1` for more information.
 
   ## Examples
 

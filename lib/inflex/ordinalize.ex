@@ -1,5 +1,24 @@
 defmodule Inflex.Ordinalize do
-  @moduledoc false
+  @moduledoc """
+  # Inflex.Ordinalize
+
+  `Inflex.Ordinalize` provides functionality to convert numbers into their ordinal form.
+
+  ## Examples
+
+      iex>    Inflex.Ordinalize.ordinalize(1)
+      "1st"
+
+      iex>    Inflex.Ordinalize.ordinalize(2)
+      "2nd"
+
+  ## Functions
+
+  - `ordinalize/1`: This is the main function of the module. It takes a number and returns the ordinal form of the number.
+
+  ## Notes
+  Please note that this function is designed to work with integer numbers. Non-integer numbers may not be handled correctly.
+  """
 
   def ordinalize(number) when is_number(number) do
     abs_number = abs(number)
