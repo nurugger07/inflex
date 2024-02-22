@@ -1,3 +1,10 @@
+# Intellij
+.idea/
+inflex.iml
+
+# Benchee report
+profile/BENCHEE.md
+
 # The directory Mix will write compiled artifacts to.
 /_build/
 

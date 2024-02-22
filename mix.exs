@@ -20,11 +20,14 @@ defmodule Inflex.Mixfile do
       ],
       name: "Inflex",
       docs: [
-        extras: ["README.md"],
+        extras: ["README.md", "profile/BENCHEE.md"],
         main: "Inflex",
         source_url: @source_url,
         api_references: false,
         extra_section: []
+      ],
+      aliases: [
+      docs: ["run profile/benchee.exs", "docs"]
       ],
       description: """
       An Elixir library for handling word inflections.
@@ -37,6 +40,10 @@ defmodule Inflex.Mixfile do
   end
 
   def deps do
-    [{:ex_doc, ">= 0.0.0", only: :dev, runtime: false}]
+    [
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+      {:benchee, "~> 1.0", only: :dev, optional: true},
+      {:benchee_markdown, "~> 0.3", only: :dev, optional: true}
+    ]
   end
 end

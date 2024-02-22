@@ -1,7 +1,13 @@
 defmodule InflexTest do
   use ExUnit.Case
-
   import Inflex
+
+  doctest Inflex.Camelize
+  doctest Inflex.Ordinalize
+  doctest Inflex.Parameterize
+  doctest Inflex.Pluralize
+  doctest Inflex.Underscore
+  doctest Inflex
 
   test :singularize do
     assert "addendum" == singularize("addenda")
